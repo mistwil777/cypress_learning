@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caesar Cypher</title>
+    <style>
+        /* Style général pour le body et centrage de la carte */
+        body {
+            background-color: #f9fafb;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Carte avec une hauteur d'environ 2/3 de l'écran */
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 90%;
+            min-height: 66vh;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Organisation en colonne pour disposer les éléments verticalement */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        /* Titres */
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            color: #333333;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 18px;
+            text-align: center;
+            color: #666666;
+            margin-bottom: 20px;
+        }
+
+        /* Champs de saisie */
+        input[type="number"],
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            font-size: 16px;
+        }
+
+        /* Champ pour le texte agrandi */
+        input[type="text"] {
+            height: 50px;
+        }
+
+        /* Bouton */
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Zone de résultat */
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: #333333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Caesar Cypher</h1>
+        <h2>Cypher Key</h2>
+        <!-- Champ pour le décalage -->
+        <input data-cy="cypher-key" type="number" id="shiftInput" placeholder="Entrez un entier" />
+        <!-- Champ pour le texte -->
+        <input data-cy="cypher-msg" type="text" id="textInput" placeholder="Entrez votre texte" />
+        <!-- Bouton -->
+        <button data-cy="cypher-btn" id="cypherButton">Cypher</button>
+        <!-- Zone d'affichage du résultat -->
+        <div data-cy="cypher-result" id="result"></div>
+    </div>
+
+    <!-- Liaison avec le fichier JavaScript -->
+    <script src="js/caesar.js"></script>
+</body>
+
+</html>
