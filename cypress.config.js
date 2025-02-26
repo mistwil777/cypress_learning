@@ -8,3 +8,15 @@ module.exports = defineConfig({
     },
   },
 });
+
+module.exports = {
+  e2e: {
+    baseUrl: 'http://localhost:3000',
+    defaultCommandTimeout: 20000,
+    pageLoadTimeout: 60000,
+    retries: {
+      runMode: 2,
+      openMode: 0,
+    },
+  },
+};
