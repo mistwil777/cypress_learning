@@ -11,8 +11,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          start: npm run start  # Cette ligne est cruciale - elle démarre votre serveur
-          wait-on: 'http://localhost:3000'  # Attend que le serveur soit disponible
-          wait-on-timeout: 120  # Temps d'attente en secondes
           browser: chrome
           headed: true
